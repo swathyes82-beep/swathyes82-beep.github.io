@@ -1,0 +1,94 @@
+
+> build
+> vite build
+
+The plugin "vite-tsconfig-paths" is detected. Vite now supports tsconfig paths resolution natively via the resolve.tsconfigPaths option. You can remove the plugin and set resolve.tsconfigPaths: true in your Vite config instead.
+vite v8.2.0 building client environment for production...
+[2Ktransforming...✓ 1908 modules transformed.
+rendering chunks...
+computing gzip size...
+.output/public/assets/styles-B5FRgwhs.css   87.39 kB │ gzip:  14.78 kB
+.output/public/assets/routes-wEBuspmA.js    65.16 kB │ gzip:  18.58 kB
+.output/public/assets/index-DHzKVD2d.js    388.08 kB │ gzip: 120.32 kB
+
+✓ built in 19.61s
+[33m[PLUGIN_TIMINGS] [0mYour build spent 20% of 19.6s inside plugin hooks (3.9s).
+Measured inside the callback, so queue time is excluded and time the callback itself awaited is not:
+  - @tailwindcss/vite:generate:build transform (9%, 1.7s, 1 call)
+Those rows are 9% of the build; the rest of the 20% is below.
+Not measurable — 2 hooks whose calls overlap, so elapsed time covers work other calls were doing. Profile with `node --cpu-prof`:
+  - tanstack-start-core:import-protection resolveId (5679 calls)
+  - tanstack-start-core::server-fn:client transform (15 calls)
+See https://rolldown.rs/reference/InputOptions.checks#plugintimings for more details.
+
+vite v8.2.0 building ssr environment for production...
+[2Ktransforming...✓ 77 modules transformed.
+rendering chunks...
+computing gzip size...
+node_modules/.nitro/vite/services/ssr/assets/styles-B5FRgwhs.css                     87.39 kB │ gzip: 14.78 kB
+node_modules/.nitro/vite/services/ssr/assets/empty-plugin-adapters-D9UWiqvJ.js        0.22 kB │ gzip:  0.16 kB
+node_modules/.nitro/vite/services/ssr/assets/_tanstack-start-manifest_v-CLgkoz8b.js   0.60 kB │ gzip:  0.32 kB
+node_modules/.nitro/vite/services/ssr/assets/start-RKGGYzjZ.js                        1.57 kB │ gzip:  0.71 kB
+node_modules/.nitro/vite/services/ssr/assets/createCsrfMiddleware-B2To0gPJ.js         3.19 kB │ gzip:  1.01 kB
+node_modules/.nitro/vite/services/ssr/index.js                                        4.61 kB │ gzip:  1.92 kB
+node_modules/.nitro/vite/services/ssr/assets/router-CGllDNCF.js                      18.32 kB │ gzip:  5.44 kB
+node_modules/.nitro/vite/services/ssr/assets/routes-rB7IrtmM.js                      45.07 kB │ gzip:  9.15 kB
+node_modules/.nitro/vite/services/ssr/assets/server-DjjSM6Mj.js                      56.41 kB │ gzip: 14.54 kB
+
+✓ built in 3.21s
+[33m[PLUGIN_TIMINGS] [0mYour build spent 67% of 3.2s inside plugin hooks (2.1s).
+Measured inside the callback, so queue time is excluded and time the callback itself awaited is not:
+  - @tailwindcss/vite:generate:build transform (43%, 1.4s, 1 call)
+Those rows are 43% of the build; the rest of the 67% is below.
+Not measurable — 2 hooks whose calls overlap, so elapsed time covers work other calls were doing. Profile with `node --cpu-prof`:
+  - tanstack-start-core:import-protection resolveId (206 calls)
+  - tanstack-start-core::server-fn:ssr transform (12 calls)
+See https://rolldown.rs/reference/InputOptions.checks#plugintimings for more details.
+
+
+[nitro] ◐ Building [Nitro] (preset: cloudflare-module, compatibility: 2026-08-04)
+[nitro] ✔ Generated public .output/public
+vite v8.2.0 building nitro environment for production...
+
+ WARN  inlineDynamicImports option is ignored because the codeSplitting option is specified.
+
+[2Ktransforming...✓ 1936 modules transformed.
+rendering chunks...
+computing gzip size...
+.output/server/_ssr/empty-plugin-adapters-D9UWiqvJ.mjs    0.23 kB │ gzip:   0.16 kB
+.output/server/_libs/clsx.mjs                             0.55 kB │ gzip:   0.31 kB
+.output/server/_chunks/ssr-renderer.mjs                   0.60 kB │ gzip:   0.36 kB
+.output/server/_tanstack-start-manifest_v-CLgkoz8b.mjs    0.65 kB │ gzip:   0.35 kB
+.output/server/_libs/hookable.mjs                         1.16 kB │ gzip:   0.51 kB
+.output/server/_runtime.mjs                               1.44 kB │ gzip:   0.67 kB
+.output/server/_ssr/start-RKGGYzjZ.mjs                    1.52 kB │ gzip:   0.70 kB
+.output/server/_ssr/ssr.mjs                               4.57 kB │ gzip:   1.93 kB
+.output/server/_libs/h3-v2+rou3+srvx.mjs                  9.87 kB │ gzip:   3.06 kB
+.output/server/index.mjs                                 10.07 kB │ gzip:   3.27 kB
+.output/server/_libs/tanstack__history.mjs               12.09 kB │ gzip:   3.48 kB
+.output/server/_libs/lucide-react.mjs                    16.33 kB │ gzip:   3.79 kB
+.output/server/_libs/react+tanstack__react-query.mjs     17.65 kB │ gzip:   4.65 kB
+.output/server/_ssr/router-CGllDNCF.mjs                  18.84 kB │ gzip:   5.50 kB
+.output/server/_libs/h3+rou3+srvx+unenv.mjs              22.67 kB │ gzip:   6.11 kB
+.output/server/_libs/tanstack__query-core.mjs            48.17 kB │ gzip:  10.70 kB
+.output/server/_ssr/routes-rB7IrtmM.mjs                  51.38 kB │ gzip:   9.43 kB
+.output/server/_libs/sonner.mjs                          51.96 kB │ gzip:  11.78 kB
+.output/server/_ssr/server-DjjSM6Mj.mjs                  58.07 kB │ gzip:  15.25 kB
+.output/server/_libs/tailwind-merge.mjs                  88.13 kB │ gzip:  15.66 kB
+.output/server/_libs/@tanstack/router-core+[...].mjs    121.16 kB │ gzip:  25.51 kB
+.output/server/_libs/@tanstack/react-router+[...].mjs   649.01 kB │ gzip: 136.89 kB
+
+✓ built in 18.54s
+[33m[PLUGIN_TIMINGS] [0mYour build spent 6% of 18.5s inside plugin hooks (1.1s).
+Not measurable — 1 hook whose calls overlap, so elapsed time covers work other calls were doing. Profile with `node --cpu-prof`:
+  - nitro:virtual-deps resolveId (33 calls)
+See https://rolldown.rs/reference/InputOptions.checks#plugintimings for more details.
+
+[nitro] ℹ Using auto generated worker name: tanstack-start-ts
+ℹ Generated .output/server/wrangler.json
+ℹ Generated .wrangler/deploy/config.json
+ℹ Generated .output/public/_headers
+ℹ Generated .output/nitro.json
+
+[nitro] ✔ You can preview this build using npx vite preview
+[nitro] ✔ You can deploy this build using npx nitro deploy --prebuilt
